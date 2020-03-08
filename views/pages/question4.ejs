@@ -1,19 +1,23 @@
-<!DOCTYPE html>
-<head>
-    <title>Node: Workshop 1</title>
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
+<%- include('../partials/head') %>
 <body>
+    <%- include('../partials/header') %>
     <header>
         <h1>Node: Workshop 1</h1>
     </header>
     <div class='main'>
         <h2>Part 1</h2>
         <div class='content'>
-            <%- include('../partials/questions/4') %>
+            <%- include('../partials/questions/11') %>
             <div class='box answer'>
                 <h3>Answer</h3>
                 <!-- render answer here -->
+                <ol>
+                <li>  1.<%= mostPopularNames[0]; %></li> 
+                <li>  2.<%= mostPopularNames[1]; %></li> 
+                <li>  3.<%= mostPopularNames[2]; %></li> 
+                </ol>
+
+                <% mostPopularNames; %>
                 
             </div>
         </div>

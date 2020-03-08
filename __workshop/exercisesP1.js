@@ -14,7 +14,7 @@ const q1 = (req, res) => {
 // -----------------------------------------------
 const q2 = (req, res) => {
     // pass this variable to the ejs file and render it in the answer box.
-    const sentence = '<p>This is the way.</p>';
+    const sentence = '<p>This is the way. <p>';
 
     res.render('pages/question2', {sentence: sentence});
 }
@@ -31,10 +31,10 @@ const q3 = (req, res) => {
         dob: 'May 12, 1956',
         profession: 'Low-level Safety Inspector',
         favoriteFood: 'Donuts',
-        favoriteBeverage: 'Duff Beer'
+        favoriteBeverage: 'Duff Beer',
     };
 
-    res.render('pages/question3');
+    res.render('pages/question3', homer);
 }
 // -----------------------------------------------
 
@@ -43,8 +43,9 @@ const q3 = (req, res) => {
 // -----------------------------------------------
 const q4 = (req, res) => {
     const popularGirlNames = ['Olivia', 'Ruby', 'Emily', 'Grace', 'Jessica'];
+    const mostPopularNames = popularGirlNames.splice(0,3);
 
-    res.render('pages/question4');
+    res.render('pages/question4', {mostPopularNames: mostPopularNames});
 }
 // -----------------------------------------------
 
@@ -54,7 +55,7 @@ const q4 = (req, res) => {
 const q5 = (req, res) => {
     const popularGirlNames = ['Olivia', 'Ruby', 'Emily', 'Grace', 'Jessica'];
 
-    res.render('pages/question5');
+    res.render('pages/question5', {popularGirlNames: popularGirlNames});
 }
 // -----------------------------------------------
 
